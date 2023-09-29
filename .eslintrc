@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "import", "prettier", "cypress"],
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:cypress/recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true,
+    "cypress/globals": true
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never" }
+   ],
+    "max-len": ["error", 300],
+    "import/no-unresolved": "off",
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
+    "@typescript-eslint/no-unused-expressions": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "class-methods-use-this": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "warn",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": ["off"]
+  }
+}

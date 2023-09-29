@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "types": ["cypress","node","@testing-library/cypress","cypress-real-events"],
+    "lib": ["ES2020", "dom"]
+  },
+  "include": ["**/*.ts", "cypress.config.js"]
+}

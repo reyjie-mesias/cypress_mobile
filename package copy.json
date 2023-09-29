@@ -1,0 +1,54 @@
+{
+  "name": "tacom_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "cy:run:smoke_staging": "CYPRESS_BASE_URL=https://qe.technologyadvice.com/ cypress run --config-file cypress-testrail.config.ts --browser chrome --tag 'Smoke-staging' --record --key eb4924fc-eef2-436b-ba75-4a3c75d2a81e --spec cypress/e2e/staging/**/*",
+    "cy:run:smoke_dev": "CYPRESS_BASE_URL=https://dev.technologyadvice.com/ cypress run --config-file cypress-testrail.config.ts --browser chrome --tag 'Smoke-dev' --record --key eb4924fc-eef2-436b-ba75-4a3c75d2a81e --spec cypress/e2e/dev/**/*",
+    "cy:run:smoke_prod": "CYPRESS_BASE_URL=https://technologyadvice.com/ cypress run --config-file cypress-testrail.config.ts --browser chrome --tag 'Smoke-prod' --record --key eb4924fc-eef2-436b-ba75-4a3c75d2a81e --spec cypress/e2e/prod/**/*",
+    "cy:run:visual_test_staging": "CYPRESS_BASE_URL=https://qe.technologyadvice.com/ cypress run  --config-file cypress-visual.config.ts --browser chrome --tag 'Visual testing-Staging' --record --key eb4924fc-eef2-436b-ba75-4a3c75d2a81e --spec cypress/e2e/visual-testing/**/*",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechnologyAdvice/TAcom_Automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechnologyAdvice/TAcom_Automation/issues"
+  },
+  "homepage": "https://github.com/TechnologyAdvice/TAcom_Automation#readme",
+  "devDependencies": {
+    "@frsource/cypress-plugin-visual-regression-diff": "^3.3.10",
+    "cypress": "^13.2.0",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@testing-library/cypress": "^10.0.1",
+    "@types/chance": "^1.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "chance": "^1.1.11",
+    "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.10.3",
+    "cypress-testrail": "^2.7.1",
+    "eslint": "^8.49.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-eslint-plugin": "^5.0.8",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^2.8.8",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2"
+  }
+}

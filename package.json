@@ -1,0 +1,40 @@
+{
+  "name": "cypress_mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "cy:run:test": "npx cypress run --browser chrome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@testing-library/cypress": "^10.0.1",
+    "@types/chance": "^1.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "chance": "^1.1.11",
+    "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.10.3",
+    "cypress-testrail": "^2.7.1",
+    "eslint": "^8.49.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-eslint-plugin": "^5.0.8",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^2.8.8",
+    "ts-loader": "^9.4.4"
+  }
+}
